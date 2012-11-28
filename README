@@ -1,0 +1,19 @@
+Usage: todo [-lacurb] [-h help] <todo file> [options]
+        -l [l]ist items will print the items in <todo file>
+        -a [a]dd item(s), (e.g. todo <todo file> "Walk the dog")
+        -c [c]heck item off of the <todo file>, needs item no. (e.g todo <todo file> 1)
+        -u [u]ncheck item off the <todo file>, needs item no. (similar to -c option)
+        -r [r]emove item off the <todo file>, neets item no. (similar to -c option)
+        -b [b]uild todo list, in this case an infile is read in place of <todo file>, 
+           this file is scanned for lines containing the word TODO
+           The remainder of the line after TODO is counted as a todo item
+           The found todo items are written to a file specified in the options field.
+           If no file is specified, then a file is automatically created called 'TODO'
+           (e.g. todo -b code.cpp code.todo)
+
+        NOTE: options a,c,u,r take as an option the item no. in the todo list that will be modified accordingly.  
+        However, if no item no. is specified, then the user will be asked to enter a item no.
+        one per line, until a Ctrl-C is given 
+
+        NOTE: The l option can be placed after all the other options in order
+
